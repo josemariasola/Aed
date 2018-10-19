@@ -1,6 +1,7 @@
 TP3 DIAGONAL DE UNA MATRIZ
 
-ï Escribir un programa que determine la suma de la diagonal de una matriz.
+‚Ä¢ Escribir un programa que determine la suma de la diagonal de una matriz.
  Restricciones
-ï La suma la debe calcular una funciÛn que tenga como par·metro in una matriz.
+‚Ä¢ La suma la debe calcular una funci√≥n que tenga como par√°metro in una matriz.
 
+![](https://github.com/Yamil2017/AED/blob/master/images/tp3.png)
