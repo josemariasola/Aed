@@ -7,7 +7,7 @@ class Lista {
 		int dato;
 		Nodo *siguiente, *anterior;
 	}*Nodoptr;
-	Nodoptr frente,fin;
+	Nodoptr frente, fin;
 
 public:
 	Lista();
