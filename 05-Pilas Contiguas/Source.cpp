@@ -1,20 +1,19 @@
-#include"PilaContigua.h"
-#include<ctime>
 #include<random>
+#include<ctime>
 
+#include "StackCont.h"
 
-int main() {
-
+int main(){
 	srand(time(0));
-
-	Pila pila1; //Genero Pila
-	
-	for (int i = 0; i < TAMANIO; i++) //Completo Pila
-		pila1.agregarDato(rand() % 15 + 1);
-	pila1.mostrarDato();//prueba, posee otros métodos a probar-funcionan-
-
-		
-	system("pause");
-	return 0;
+	Pila nueva(5);
+	for(int i=0;i<nueva.TAMANIO;i++)
+		push(nueva,1+rand()%15);
+	impresion(nueva);
+	pop(nueva);
+	pop(nueva);
+	impresion(nueva);
+	push(nueva,rand()%354);
+	impresion(nueva);
+	vaciar(nueva);
+	impresion(nueva);
 }
-
