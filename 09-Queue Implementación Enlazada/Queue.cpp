@@ -5,7 +5,7 @@ Eslabon::Eslabon():dato{},siguiente{nullptr}{}
 
 Cola::Cola():frente{nullptr},fin{nullptr}{}
 
-Cola enqueue(Cola queue,const int valor){
+Cola& enqueue(Cola& queue,int valor){
 	Eslabon*nuevoEslabon=new Eslabon;
 	nuevoEslabon->dato=valor;
 	nuevoEslabon->siguiente=nullptr;
@@ -20,11 +20,11 @@ Cola enqueue(Cola queue,const int valor){
 	return queue;
 }
 
-bool isEmpty(const Cola queue){
+bool isEmpty(const Cola& queue){
 	return (queue.frente==nullptr)?true:false;
 }
 
-void print(const Cola queue){
+void print(const Cola& queue){
 	Eslabon*aux=queue.frente;
 	while(aux!=nullptr){
 		std::cout<<aux->dato<<" ";
@@ -33,7 +33,7 @@ void print(const Cola queue){
 	std::cout<<"\nFin de la impresión"<<std::endl;
 }
 
-Cola dequeue(Cola queue){
+Cola& dequeue(Cola& queue){
 	Eslabon*aux=queue.frente;
 	if(queue.frente->siguiente==nullptr||isEmpty(queue)){
 		queue.frente=nullptr;
@@ -48,7 +48,7 @@ Cola dequeue(Cola queue){
 	return queue;
 }
 
-Cola vaciar(Cola queue){
+Cola& vaciar(Cola& queue){
 	if(!isEmpty(queue)){
 		dequeue(queue);
 		vaciar(queue);

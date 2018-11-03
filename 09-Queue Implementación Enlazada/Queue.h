@@ -12,8 +12,8 @@ struct Cola{
 	Eslabon*frente,*fin;
 };
 
-Cola enqueue(Cola,const int);
-Cola dequeue(Cola);
-void print(const Cola);
-bool isEmpty(const Cola);
-Cola vaciar(Cola);
+Cola& enqueue(Cola&, int);
+Cola& dequeue(Cola&);
+void print(const Cola&);
+bool isEmpty(const Cola&);
+Cola& vaciar(Cola&);
