@@ -1,19 +1,20 @@
-#include"SecuenciaEnlazada.h"
+#include"List.h"
 #include<iostream>
 
+int main(){
 
-int main() {
+	Lista lista;
 
-	secuencia secuencia1(3);
-	secuencia1.agregarElemento(1);
-	secuencia1.agregarElemento(2);
-	secuencia1.imprimirSecuencia();
-	secuencia1.agregarElemento(4);
-	secuencia1.imprimirSecuencia();
-	secuencia1.agregarElemento(54);
-	secuencia1.imprimirSecuencia();
+	set(lista,"Hola, ");
+	set(lista,"soy Yamil ");
+	set(lista,"y estudio AyED.");
+	print(lista);
+	std::cout<<get(lista,1)<<'\n';
+	std::cout<<get(lista,2)<<'\n';
+	std::cout<<get(lista,1)<<'\n';
+	vaciar(lista);
+	print(lista);
 
-	
-	system("pause");
+
 	return 0;
 }
