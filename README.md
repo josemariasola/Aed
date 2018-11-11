@@ -1,0 +1,13 @@
+# ALGORITMOS Y ESTRUCTURAS DE DATOS
+
+#CURSO: K1051
+
+#AÑO:2018	
+
+#LEGAJO: 156461-4
+
+#APELLIDO: LOPEZ
+
+#NOMBRES: YAMIL ALEJANDRO 
+
+#Correciones por: Esp. Ing. José María Sola, prof.
