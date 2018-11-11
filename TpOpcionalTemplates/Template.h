@@ -1,6 +1,8 @@
 #ifndef TEMPLATE_H
 #define TEMPLATE_H
 
+#pragma clang diagnostic ignored "-Wc++98-compat"
+
 #include<iostream>
 
 template<typename T>
@@ -21,17 +23,17 @@ Matriz<T>::~Matriz() {
 
 template<typename T>
 Matriz<T>::Matriz() : nFilas{ 2 }, nColumnas{ 2 }, matriz{ nullptr }{
-	T*matriz = new T(nColumnas*nFilas);
+	matriz = new T(nColumnas*nFilas);
 }
 
 template<typename T>
 Matriz<T>::Matriz(int a) : nFilas{ a }, nColumnas{ a }, matriz{ nullptr }{
-	T*matriz = new T(nColumnas*nFilas);
+	matriz = new T(nColumnas*nFilas);
 }
 
 template<typename T>
 Matriz<T>::Matriz(int fila, int columna) : nFilas{ fila }, nColumnas{ columna }, matriz{ nullptr }{
-	T*matriz = new T(nColumnas*nFilas);
+	matriz = new T(nColumnas*nFilas);
 }
 
 template<typename T>
