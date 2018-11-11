@@ -7,12 +7,12 @@
 
 template<typename T>
 struct Matriz {
-	int nFilas,nColumnas;
+	unsigned nFilas,nColumnas;
 	T*matriz;
 	
 	Matriz();
-	Matriz(int);
-	Matriz(int, int);
+	Matriz(unsigned);
+	Matriz(unsigned, unsigned);
 	~Matriz();
 };
 
@@ -27,32 +27,32 @@ Matriz<T>::Matriz() : nFilas{ 2 }, nColumnas{ 2 }, matriz{ nullptr }{
 }
 
 template<typename T>
-Matriz<T>::Matriz(int a) : nFilas{ a }, nColumnas{ a }, matriz{ nullptr }{
+Matriz<T>::Matriz(unsigned a) : nFilas{ a }, nColumnas{ a }, matriz{ nullptr }{
 	matriz = new T(nColumnas*nFilas);
 }
 
 template<typename T>
-Matriz<T>::Matriz(int fila, int columna) : nFilas{ fila }, nColumnas{ columna }, matriz{ nullptr }{
+Matriz<T>::Matriz(unsigned fila, unsigned columna) : nFilas{ fila }, nColumnas{ columna }, matriz{ nullptr }{
 	matriz = new T(nColumnas*nFilas);
 }
 
 template<typename T>
-Matriz<T>& set(Matriz<T>& matrix, T valor, int fila, int columna) {
-	short int elemento = (fila - 1)*matrix.nColumnas + columna - 1;
+Matriz<T>& set(Matriz<T>& matrix, T valor, unsigned fila, unsigned columna) {
+	unsigned elemento = (fila - 1)*matrix.nColumnas + columna - 1;
 	matrix.matriz[elemento] = valor;
 	return matrix;
 }
 
 template<typename T>
 void print(const Matriz<T>& matrix) {
-	for (int i=0;i<matrix.nColumnas*matrix.nFilas;i++)
+	for (unsigned i=0;i<matrix.nColumnas*matrix.nFilas;i++)
 		std::cout << matrix.matriz[i] << " ";
 	std::cout << "\nFin de la impresion." << std::endl;
 }
 
 template<typename T>
-T& get(const Matriz<T>& matrix, int fila, int columna) {
-	short int elemento = (fila - 1)*matrix.nColumnas + columna - 1;
+T& get(const Matriz<T>& matrix, unsigned fila, unsigned columna) {
+	unsigned elemento = (fila - 1)*matrix.nColumnas + columna - 1;
 	return matrix.matriz[elemento];
 }
 
