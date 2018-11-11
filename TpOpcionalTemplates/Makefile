@@ -8,4 +8,4 @@ test: all
 	./Source
 
 clean:
-	rm -f Source
+	rm -f Source Source.o
