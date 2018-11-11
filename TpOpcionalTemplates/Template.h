@@ -1,6 +1,8 @@
 #ifndef TEMPLATE_H
 #define TEMPLATE_H
 
+#include<iostream>
+
 template<typename T>
 struct Matriz {
 	int nFilas,nColumnas;
